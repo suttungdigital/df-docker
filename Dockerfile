@@ -40,7 +40,7 @@ RUN a2ensite dreamfactory
 RUN a2enmod headers
 RUN a2enmod rewrite
 
-ENV DF_VERSION 2.3.0
+ENV DF_VERSION 2.3.1
 
 # get app src
 RUN git clone --branch ${DF_VERSION} https://github.com/dreamfactorysoftware/dreamfactory.git /opt/dreamfactory
