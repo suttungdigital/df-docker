@@ -70,4 +70,4 @@ RUN ln -sf /dev/stderr /var/log/apache2/error.log
 
 EXPOSE 80
 
-CMD ["/docker-entrypoint.sh"]
+CMD ["bash", "/docker-entrypoint.sh"]
