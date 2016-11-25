@@ -57,7 +57,8 @@ RUN php artisan dreamfactory:setup --no-app-key --db_driver=mysql --df_install=D
 # file based cache.  If you're using a mysql service, change db_driver to mysql
 #RUN php artisan dreamfactory:setup --no-app-key --db_driver=pgsql --cache_driver=redis --df_install="Docker(Bluemix)"
 
-RUN chown -R www-data:www-data /opt/dreamfactory
+RUN chown -R www-data:www-data storage bootstrap/cache
+RUN chmod -R 2775 storage bootstrap/cache
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
